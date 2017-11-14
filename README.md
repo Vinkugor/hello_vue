@@ -7,7 +7,7 @@ vue + vue-router + vuex + webpack
 git clone https://github.com/Vinkugor/hello_vue.git
 
 # 进入文件夹
-cd Hello_vue
+cd hello_vue
 
 # 安装依赖
 npm install
