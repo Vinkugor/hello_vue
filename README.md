@@ -4,7 +4,7 @@ vue + vue-router + vuex + webpack
 ## 项目运行（nodejs 6.0+）
 ``` bash
 # 克隆到本地
-git clone https://gitee.com/_Vinku/Hello_vue.git
+git clone https://github.com/Vinkugor/hello_vue.git
 
 # 进入文件夹
 cd Hello_vue
