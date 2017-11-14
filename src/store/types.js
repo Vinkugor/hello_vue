@@ -1,0 +1,3 @@
+export const CHANGE_TEXT = 'CHANGE_TEXT'
+export const SUBMIT_NAME = 'SUBMIT_NAME'
+export const PROFILE_CHANGE_TEXT = 'PROFILE_CHANGE_TEXT'
