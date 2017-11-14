@@ -1,5 +1,5 @@
 # Hello_vue
-vue + vue-router + vuex + webpack
+vue2 + vue-router3 + vuex3 + webpack2
 
 ## 项目运行（nodejs 6.0+）
 ``` bash
