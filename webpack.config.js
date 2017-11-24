@@ -1,12 +1,13 @@
 var path = require('path')
 var webpack = require('webpack')
 var PrerenderSpaPlugin = require('prerender-spa-plugin')
+var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     entry: ['babel-polyfill', './src/main.js'],
     output: {
         path: path.resolve(__dirname, './dist'),
-        publicPath: '/dist/',
+        publicPath: '/',
         filename: 'build.js'
     },
     module: {
@@ -39,12 +40,12 @@ module.exports = {
         ]
     },
     plugins: [
-        new PrerenderSpaPlugin(
-            // Absolute path to compiled SPA
-            path.join(__dirname, 'dist'),
-            // List of routes to prerender
-            [ '/', '/about', '/contact' ]
-        )
+        new HtmlWebpackPlugin({
+            title: 'PRODUCTION prerender-spa-plugin',
+            template: 'index.html',
+            filename: path.resolve(__dirname, 'dist/index.html'),
+            favicon: 'favicon.ico'
+        })
     ],
     resolve: {
         alias: {
@@ -79,6 +80,12 @@ if (process.env.NODE_ENV === 'production') {
         }),
         new webpack.LoaderOptionsPlugin({
             minimize: true
-        })
+        }),
+        new PrerenderSpaPlugin(
+            // Absolute path to compiled SPA
+            path.join(__dirname, 'dist'),
+            // List of routes to prerender
+            [ '/', '/about', '/contact', '/contact/GG' ]
+        )
     ])
 }
