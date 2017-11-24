@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import store from './store/index.js';       //store
-import router from './route-config.js';     //路由配置
+import router from './router-config.js';     //路由配置
 
 require('./request-config.js')
 
