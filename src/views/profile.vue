@@ -22,12 +22,16 @@
             };
         },
         created() {
-            
+    
         },
         beforeRouteUpdate(to, from, next) {
             next();
         },
         computed: {
+            products() {
+                console.log(this.$store)
+                return ;
+            },
             ...mapState({
                 name: 'name',
             }),
