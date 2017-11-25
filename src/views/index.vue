@@ -1,5 +1,6 @@
 <template>
     <div id="app">
+        <img src="../assets/logo.png" />
         <h1 @click="goOther()">{{ msg }}{{ token }}{{strJoin}}</h1>
         <button @click="addCount()">Token++</button>
         <div>
